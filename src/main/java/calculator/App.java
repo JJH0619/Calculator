@@ -1,6 +1,5 @@
 package calculator;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class App {
@@ -16,7 +15,7 @@ public class App {
         System.out.println("num1,num2= " + num1 + "," + num2);
 
         System.out.println("사칙연산 기호 입력 : "); //  +_*/
-        char operator = sc.next().charAt()
+        char operator = sc.next().charAt(0);
                 //char charAt(int index) 문자열에서 해당 위치(index)에 있는 문자를 반환한다
         System.out.println("operator = " + operator);
 
