@@ -11,7 +11,7 @@ public class App {
         int num1 = sc.nextInt();
         System.out.print("두 번째 숫자를 입력하세요: ");
         int num2 = sc.nextInt();
-
+//test
         System.out.println("num1,num2= " + num1 + "," + num2);
 
     }
