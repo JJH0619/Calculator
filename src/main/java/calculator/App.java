@@ -1,6 +1,5 @@
 package calculator;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class App {
@@ -59,7 +58,7 @@ public class App {
 
                 }
             }
-            System.out.println(result);
+            System.out.println("결과 : " + result);
         }
     }
 }
