@@ -67,13 +67,17 @@ public class App {
 
             results.add(result); // 새로운 결과를 큐에 추가
 
-            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제) : ");
+            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? 원치 않을 시 아무 키 입력 (remove 입력 시 삭제) : ");
             String input3 = sc.next();
             if (input3.equalsIgnoreCase("remove")) {
                 String removedResult = results.poll(); // 가장 먼저 저장된 결과를 삭제
                 System.out.println("삭제된 결과: " + removedResult);
-
-
+            }
+            System.out.print("저장된 연산결과를 조회하시겠습니까? 원치 않을 시 아무 키 입력 (inquiry 입력 시 조회)");
+            String input4 = sc.next();
+            if (input4.equalsIgnoreCase("inquiry")) {
+                for (String res : results) // 가장 먼저 저장된 결과를 삭제
+                System.out.println(res);
             }
         }
 
