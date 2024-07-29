@@ -11,8 +11,7 @@ public class App {
 
 //        String[] results = new String[10]; // 결과를 저장할 배열
 //        int count = 0; // 저장된 결과의 개수를 추적할 카운터 변수
-        Queue<String> results = new LinkedList<>(); // 결과를 저장할 큐
-        final int MAX_SIZE = 10; // 큐의 최대 크기
+        Queue<String> results = new LinkedList<>(); // 결과를 저장할 큐 // 범위를 지정하지 않아 무한정
 
         while (true) {
             System.out.print("첫 번째 숫자를 입력하세요 (종료하려면 'exit' 입력): ");
@@ -61,32 +60,30 @@ public class App {
                         continue;
 
                 }
-            }
-//            System.out.println("결과 : " + result);
-//            if (count < results.length) {
-//                results[count] = result; // 결과를 배열에 저장
-//                count++; // 카운터 증가
-//            } else {
-//                System.out.println("결과 배열이 가득 찼습니다. 더 이상 저장할 수 없습니다.");
-//            }
-//        }
-//        System.out.println(result);
+            } // 만약 저장값이 10개가 되고 난후 추가로 저장을 원할 시 문구 출력 후 원하면 지우고 아니면
 
-            if (results.size() >= MAX_SIZE) {
-                results.poll(); // 큐가 가득 찼으면 가장 오래된 결과를 제거
-            }
+
+            System.out.println(result);
+
             results.add(result); // 새로운 결과를 큐에 추가
 
-            // 저장된 연산 결과 출력
-            System.out.println("저장된 연산 결과:");
-            for (String res : results) {
-                System.out.println(res);
+            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제) : ");
+            String input3 = sc.next();
+            if (input3.equalsIgnoreCase("remove")) {
+                String removedResult = results.poll(); // 가장 먼저 저장된 결과를 삭제
+                System.out.println("삭제된 결과: " + removedResult);
 
 
             }
         }
+
+        System.out.println("저장된 연산 결과:");
+        for (String res : results) {
+            System.out.println(res);
+        }
     }
 }
+
 
 
 
